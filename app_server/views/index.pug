@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 IBM Cork CoderDojo - Student Management
+  p Below lists all the students who currently attend this Dojo.
+  - var list = ['A Cool Guy', 'A Cool Gal', 'Chuck Norris', 'will.i.am']
+  ul
+      each item in list
+          li= item 
