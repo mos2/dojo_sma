@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const ctrlMain = require('../controllers/main');
+const ctrlStudents = require('../controllers/students');
 
 const homepageController = function (req, res) {
     res.render('index', { title: 'Express' });
 };
-
-/* GET home page. */
-router.get('/', ctrlMain.index);
+/* Students page. */
+router.get('/', ctrlStudents.studentsList);
+router.get('/student', ctrlStudents.student)
+router.get('/student/add', ctrlStudents.addStudent)
 
 module.exports = router;

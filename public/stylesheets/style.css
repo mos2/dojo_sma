@@ -45,7 +45,18 @@ th, td {
     padding: 2px 20px;
 }
 
-pre {
-    padding: 0;
-    margin: 0;
+.navbar {
+    background-color: #ad1d28;
+    border-color: #911821;
+}
+
+.navbar-brand {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.banner {
+    margin-top: 4em;
+    border-bottom: 1px solid #469ea8;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.5em;
 }
