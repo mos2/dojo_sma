@@ -7,7 +7,7 @@ const homepageController = function (req, res) {
 };
 /* Students page. */
 router.get('/', ctrlStudents.studentsList);
-router.get('/student', ctrlStudents.student)
+router.get('/student', ctrlStudents.studentInfo)
 router.get('/student/add', ctrlStudents.addStudent)
 
 module.exports = router;

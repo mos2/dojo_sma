@@ -3,25 +3,29 @@ html
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
-    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
+    nav.navbar.navbar-toggleable-md.fixed-top.navbar-light.bg-light
       .container
-        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
+        a.navbar-brand(href='/')
+          img(src='https://pbs.twimg.com/profile_images/344513261573042139/43300f8d4bec2b930342a47dc724ff20_400x400.jpeg', width='30', height='30', class='d-inline-block align-top', alt='')
+          | IBM Cork CoderDojo - Student Management
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain' aria-controls='avbarSupportedContent', aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
-        a.navbar-brand(href='/ ') IBM Cork CoderDojo - Student Management
-        #navbarMain.navbar-collapse.collapse
-          ul.navbar-nav.mr-auto
+        #navbarMain.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto.mt-2.mt-md-0
             li.nav-item
               a.nav-link(href='/about/') About
+            li.nav-item
+            a.nav-link(href='/student/new') New Student
     .container
       block content
       footer
         .row
           .col-12
-            small &copy; Simon Holmes 2017
+            small Nothing for the footer yet!
       script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js')
       script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js')
       script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js')

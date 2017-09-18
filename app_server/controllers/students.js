@@ -1,10 +1,10 @@
 /* GET students page */
 const studentsList = function(req, res) {
-    res.render('index', { title: 'IBM Cork CoderDojo - Student Management' });
+    res.render('student-list', { title: 'IBM Cork CoderDojo - Student Management' });
 };
 
-const student = function(req, res) {
-    res.render('index', { title: 'IBM Cork CoderDojo - Student Management' });
+const studentInfo = function(req, res) {
+    res.render('student-info', { title: 'IBM Cork CoderDojo - Student Management' });
 };
 
 const addStudent = function(req, res) {
@@ -13,6 +13,6 @@ const addStudent = function(req, res) {
 
 module.exports = {
     studentsList,
-    student,
+    studentInfo,
     addStudent
 };

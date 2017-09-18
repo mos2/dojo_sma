@@ -7,7 +7,6 @@ body,html {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     color: #ffffff;
     margin: 40px;
-    line-height: 1.3em;
 }
 
 a {
@@ -60,3 +59,96 @@ th, td {
     margin-bottom: 1.5em;
     padding-bottom: 0.5em;
 }
+
+h1 small {
+    color: #aaa;
+}
+
+.card {
+    background-color: #469ea8;
+    margin-bottom: 2px;
+}
+
+.card-primary {
+    border-color: #a2ced3;
+}
+
+.card.span.badge {
+    display: block;
+}
+
+
+.badge-stack p {
+    margin-left: auto;
+    margin-right: 0em;
+}
+
+.badge-stack p span {
+    margin-left: auto;
+    margin-right: 0em;
+}
+
+.badge-default, .btn-primary {
+    background-color: #ad1d28;
+    border-color: #911821;
+}
+
+.badge-last-attended {
+    background-color: #d7b548;
+    border-color: #183f91;
+}
+
+.badge-mentor {
+    background-color: #1ed7d2;
+    border-color: #183f91;
+}
+
+.badge-ninja {
+    background-color: #2cd723;
+    border-color: #fffd05;
+}
+
+.badge-last-belt-white {
+    background-color: #ffffff;
+    border-color: #000000;
+    color: black;
+}
+
+.badge-last-belt-blue {
+    background-color: #2b15ff;
+    border-color: #000000;
+}
+
+.badge-last-belt-black {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.badge-stack {
+    display: inline;
+}
+
+h4 a, h4 a:hover {
+    color: #fff;
+}
+
+h4 small {
+    font-size: 60%;
+    line-height: 200%;
+    color: #aaa;
+}
+
+.address {
+    margin-bottom: 0.5rem;
+}
+
+#studentPrimaryInfo h1, h2 {
+    clear: both;
+    display: inline;
+}
+
+#studentEmail {
+    float: right;
+}
+

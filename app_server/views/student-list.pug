@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 Student List
+  .row
+    .col-12.col-md-8
+      .card
+        .card-block
+          h4
+            a(href="/student") Shane Williams
+            small &nbsp;
+          .badge-stack
+              span.badge.badge-pill.badge-default.float-right.badge-stack Python
+              span.badge.badge-pill.badge-last-attended.float-right.badge-stack 16th September
+              span.badge.badge-pill.badge-last-belt-white.float-right.bade-stack White
+              span.badge.badge-pill.badge-role.float-right.badge-ninja Ninja
+          p.address shane@anemail.com
+      .card
+        .card-block
+          h4
+            a(href="/student") David Hurley
+            small &nbsp;
+          .badge-stack
+            span.badge.badge-pill.badge-default.float-right.badge-stack Python
+            span.badge.badge-pill.badge-last-attended.float-right.badge-stack 16th September
+            span.badge.badge-pill.badge-last-belt-black.float-right.bade-stack Black
+            span.badge.badge-pill.badge-role.float-right.badge-mentor Mentor
+          p.address djm@gmail.com
