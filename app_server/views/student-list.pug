@@ -1,35 +1,49 @@
 extends layout
 
+mixin beltStyle(name)
+  - if (name == "White")
+    span.badge.badge-pill.badge-belt-white.float-right.bade-stack #{name}
+  - else if (name == "Blue")
+    span.badge.badge-pill.badge-belt-blue.float-right.bade-stack #{name}
+  - else if (name == "Yellow")
+    span.badge.badge-pill.badge-belt-yellow.float-right.bade-stack #{name}
+  - else if (name == "Black")
+    span.badge.badge-pill.badge-belt-black.float-right.bade-stack #{name}
+
+mixin classStyle(name, floatRight)
+  - if (name == "Web Dev")
+    span(class={'float-right': floatRight }).badge.badge-pill.badge-class-web-dev.badge-stack #{name}
+  - else if (name == "Python")
+    span(class={'float-right': floatRight }).badge.badge-pill.badge-class-python.badge-stack #{name}
+  - else if (name == "Comp Sci")
+    span(class={'float-right': floatRight }).badge.badge-pill.badge-class-comp-sci.badge-stack #{name}
+
+mixin currentRoleStyle(name, floatRight)
+  - if (name == "Ninja")
+    span(class={'float-right': floatRight }).badge.badge-pill.badge-role.badge-ninja #{name}
+  - else
+    span(class={'float-right': floatRight }).badge.badge-pill.badge-role.badge-mentor #{name}
+
 block content
   .row.banner
     .col-12
-      h1 Student List
+      h1= pageHeader.title
+      small &nbsp;#{pageHeader.description}
   .row
     .col-12.col-md-8
-      .card
-        .card-block
-          h4
-            a(href="/student") Shane Williams
-            small &nbsp;
-          p
-            span.badge.badge-pill.badge-role.badge-class-python Python
-          .badge-stack
-              span.badge.badge-pill.badge-class-web-dev.float-right.badge-stack Web Dev
-              span.badge.badge-pill.badge-last-attended.float-right.badge-stack 16th September
-              span.badge.badge-pill.badge-belt-white.float-right.bade-stack White
-              span.badge.badge-pill.badge-role.float-right.badge-ninja Ninja
-          p.address shane@anemail.com
-      .card
-        .card-block
-          h4
-            a(href="/student") David Hurley
-            small &nbsp;
-          p
-            span.badge.badge-pill.badge-role.badge-class-python Python
-            span.badge.badge-pill.badge-role.badge-mentor Mentor
-          .badge-stack
-            span.badge.badge-pill.badge-class-comp-sci.float-right.badge-stack Comp Sci
-            span.badge.badge-pill.badge-last-attended.float-right.badge-stack 16th September
-            span.badge.badge-pill.badge-belt-black.float-right.bade-stack Black
-            span.badge.badge-pill.badge-role.float-right.badge-mentor Mentor
-          p.address djm@gmail.com
+      each student in students
+        .card
+          .card-block
+            h4
+              a(href="/student")= student.name
+              small &nbsp;
+            p
+              + classStyle(student.current_class)
+              - if (student.current_role == "Mentor")
+                +currentRoleStyle("Mentor", false)
+            .badge-stack
+                +classStyle(student.last_class, true)
+                span.badge.badge-pill.badge-last-attended.float-right.badge-stack #{student.last_attended}
+                +beltStyle(student.last_belt)
+                +currentRoleStyle(student.current_role, true)
+            p.address #{student.email}

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    .row.banner
+        .col-12
+            h1 Add Student
+    .row
+        .col-12.col-md-8
+            form(action="/", method="get", role="form")
+                .form-group.row
+                    label.col-10.col-sm-2.col-form-label(for="name") Student Name
+                    .col-12.col-sm-10
+                        input#name.form-control(name="name")
+                .form-group.row
+                    label.col-10.col-sm-2.col-form-label(for="dob") Date of Birth (DD-MM-YYY)
+                    .col-12.col-sm-10
+                        input#dob.form-control(name="dob")
+                .form-group.row
+                    label.col-10.col-sm-2.col-form-label(for="email") Parent/Guardian Email
+                    .col-12.col-sm-10
+                        input#email.form-control(name="email")
+                .form-group.row
+                    label.col-10.col-sm-2.col-form-label(for="phone") Parent/Guardian Phone
+                    .col-12.col-sm-10
+                        input#phone.form-control(name="phone")
+                .form-group.row
+                    label.col-sm-2.col-form-label(for="notes") Notes
+                    .col-sm-10
+                        textarea#notes.form-control(name="Notes", rows="3")
+                button.btn.btn-primary.float-right Add Student
+        .col-12.col-md-4
