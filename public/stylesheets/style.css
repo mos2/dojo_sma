@@ -108,22 +108,47 @@ h1 small {
     border-color: #fffd05;
 }
 
-.badge-last-belt-white {
+.badge-belt-white {
     background-color: #ffffff;
     border-color: #000000;
     color: black;
 }
 
-.badge-last-belt-blue {
+.badge-belt-blue {
     background-color: #2b15ff;
     border-color: #000000;
+    color: black;
 }
 
-.badge-last-belt-black {
+.badge-belt-black {
     background-color: #000000;
     border-color: #000000;
-    color: #ffffff;
+    color: white
 }
+.badge-belt-yellow {
+    background-color: #fbff00;
+    border-color: #000000;
+    color: black;
+}
+
+.badge-class-web-dev {
+    background-color: #ffc16b;
+    border-color: #000000;
+    color: white;
+}
+
+.badge-class-python {
+    background-color: #95ff88;
+    border-color: #000000;
+    color: white;
+}
+
+.badge-class-comp-sci {
+    background-color: #ff4c4a;
+    border-color: #000000;
+    color: white;
+}
+
 
 .badge-stack {
     display: inline;
@@ -150,5 +175,9 @@ h4 small {
 
 #studentEmail {
     float: right;
+}
+
+.classes-current {
+    font-style: italic;
 }
 
